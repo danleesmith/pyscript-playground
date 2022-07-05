@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ptolemy</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<style>
+    body {
+        background-color: #eee8d5;
+    }
+    svg { 
+        display: block; 
+    }
+    circle {
+        stroke-opacity: 0;
+        stroke-width: 0px;
+        transition: stroke-opacity 1s, stroke-width 1s, transform 1s;
+        transform-box: fill-box;
+        transform-origin: center center;
+    }
+    circle:hover {
+        fill: #d33682;
+        stroke: #002b36;
+        stroke-opacity: 1;
+        stroke-width: 2px;
+        transform: scale(3);
+    }
+</style>
+<body>
+    <svg id="plot"></svg>
+    <py-script src="./src/init.py"></py-script>
+</body>
+</html>
